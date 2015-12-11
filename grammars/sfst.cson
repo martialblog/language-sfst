@@ -10,28 +10,32 @@
 ]
 
 'repository':
-  'alphabet':
-    'match': 'ALPHABET'
+  'fix':
+    'match': 'ALPHABET|#include'
     'name': 'variable.language.sfst'
 
   'variable':
-    'match': '\\$[A-Za-z0-9-]*\\$'
+    'match': '\\$[=A-Za-z0-9-]*\\$'
     'name': 'constant.language.sfst'
 
   'agreement':
-    'match': '\\#\\w*\\#'
+    'match': '\\#[=A-Za-z0-9-]*\\#'
     'name': 'storage.function.sfst'
 
   'tags':
-    'match': '\\<\\w*\\>'
+    'match': '\\<[=A-Za-z0-9-]*\\>'
     'name': 'storage.type.string.sfst'
 
   'metacharacter':
     'match': '\\\\.'
     'name': 'constant.character.escape.sfst'
 
-  'replacement':
+  'koskenniemi-replacement':
     'match': '(\\^|\\_|\\\\|\\/)\\-\\>'
+    'name': 'variable.language.sfst'
+
+  'karttunen-replacement':
+    'match': '(\\^?\\<=\\>?|\\^?\\<?=\\>)'
     'name': 'variable.language.sfst'
 
   'comment':
@@ -49,13 +53,16 @@
         'include': '#variable'
       }
       {
-        'include': '#alphabet'
+        'include': '#fix'
       }
       {
         'include': '#agreement'
       }
       {
-        'include': '#replacement'
+        'include': '#koskenniemi-replacement'
+      }
+      {
+        'include': '#karttunen-replacement'
       }
       {
         'include': '#tags'
