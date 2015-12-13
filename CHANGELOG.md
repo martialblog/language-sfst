@@ -1,3 +1,6 @@
+## 0.1.0 Beta Release
+* Tested syntax matching.
+
 ## 0.0.2
 * Improved syntax matching.
 
