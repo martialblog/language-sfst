@@ -2,6 +2,8 @@
   "name": "language-sfst",
   "version": "0.1.0",
   "description": "Syntax highlighting for SFST",
+  "repository": "https://github.com/martialblog/language-sfst",
+  "license": "MIT",
   "engines": {
     "atom": "*",
     "node": "*"
