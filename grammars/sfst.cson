@@ -15,15 +15,15 @@
     'name': 'variable.language.sfst'
 
   'variable':
-    'match': '\\$[=A-Za-z0-9-]*\\$'
+    'match': '\\$[^\\$]*\\$'
     'name': 'constant.language.sfst'
 
   'agreement':
-    'match': '\\#[=A-Za-z0-9-]*\\#'
+    'match': '\\#[^\\#]*\\#'
     'name': 'storage.function.sfst'
 
   'tags':
-    'match': '\\<[=A-Za-z0-9-]*\\>'
+    'match': '\\<[^\\>]*\\>'
     'name': 'storage.type.string.sfst'
 
   'metacharacter':
